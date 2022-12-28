@@ -1,0 +1,25 @@
+.app-wrapper {
+    display: grid;
+    margin: 0 auto;
+    width: 1200px;
+    grid-template-areas:
+  'hat hat'
+  'left main';
+
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    /*grid-gap: 10px;*/
+}
+
+.app-wrapper-content {
+    grid-area: main;
+    background-color: #7df9fd;
+}
+
+.errorsInput {
+    border: 2px solid red;
+}
+
+.errors {
+    color: red;
+}

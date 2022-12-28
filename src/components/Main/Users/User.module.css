@@ -1,0 +1,93 @@
+.listUser {
+    display: inline-grid;
+    max-width: 600px;
+    grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
+
+    grid-template-columns: 10fr;
+}
+
+.listUser h2 {
+    width: auto;
+    color: #0d7477;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 80px 10fr;
+    grid-template-rows: 10fr 40px;
+    margin-left: 100px;
+}
+
+.user img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.subscribe {
+    background-color: #c36be0;
+    border-radius: 10px;
+    border: 1px solid #b227e3;
+    height: 30px;
+    color: white;
+
+
+}
+
+.un {
+    background-color: #868686;
+}
+
+
+.subscribe:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.description {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 30px 1fr;
+    border: 1px solid #20b5b9;
+    border-radius: 15px;
+    padding: 10px;
+    color: #484646;
+}
+
+.numberPage {
+    display: grid;
+    grid-template-columns: repeat(13, 60px);
+    margin-bottom: 15px;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.3rem;
+
+}
+
+.pageNumber {
+    color: #4f4e4e;
+    font-size: 1.2rem;
+
+
+}
+
+.pageNumber:hover {
+    cursor: pointer;
+}
+
+.preloader {
+    display: none;
+}
+

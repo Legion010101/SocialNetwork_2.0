@@ -1,0 +1,59 @@
+.posts {
+    margin-top: 15px;
+}
+
+.blog {
+    margin: 15px;
+}
+
+.overWindow {
+    width: 1000px;
+    height: 200px;
+    overflow: auto
+}
+
+.overWindow img {
+    width: 100%;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.avatarPlace {
+    padding-top: 15px;
+
+}
+
+.description {
+    display: grid;
+    grid-template-columns: 60px 250px 250px;
+    padding: 10px;
+
+
+}
+
+
+::-webkit-scrollbar {
+    width: 15px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    color: #d3a970;
+
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: #e7b67b;
+    border-radius: 5px;
+}
+
+.about {
+
+}
+
