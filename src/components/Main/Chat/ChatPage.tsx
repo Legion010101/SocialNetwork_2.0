@@ -35,7 +35,7 @@ const ChatPage = () => {
     }
   }, [])
 
-  if (!isAuth) return <Navigate to={'/SocialNetwork_2.0/login'} />
+  if (!isAuth) return <Navigate to={'/login'} />
   return (
     <div>
       <Chat />
@@ -133,9 +133,7 @@ const Message: FC<PropsType> = React.memo(
     const authorizedUser = useSelector(getDataUserAuth)
     return (
       <div className={styles.message}>
-        <NavLink
-          to={'/SocialNetwork_2.0/profile/' + userId}
-          className={styles.avatar}>
+        <NavLink to={'/profile/' + userId} className={styles.avatar}>
           <Avatar avatar={avatar} />
         </NavLink>
         <div

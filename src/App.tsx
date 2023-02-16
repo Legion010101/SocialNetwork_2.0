@@ -62,31 +62,16 @@ export const App: FC = () => {
                 background: colorBgContainer,
               }}>
               <Routes>
+                <Route path="/" element={<Navigate to={'/profile/me'} />} />
                 <Route
-                  path="/SocialNetwork_2.0"
-                  element={<Navigate to={'/SocialNetwork_2.0/profile/me'} />}
-                />
-                <Route
-                  path="/SocialNetwork_2.0/profile/:userId"
+                  path="/profile/:userId"
                   element={<ProfileUserContainerAPI />}
                 />
-                <Route
-                  path="/SocialNetwork_2.0/findUsers"
-                  element={withSuspense(Users)}
-                />
-                <Route
-                  path="/SocialNetwork_2.0/chatPage"
-                  element={withSuspense(ChatPage)}
-                />
+                <Route path="/findUsers" element={withSuspense(Users)} />
+                <Route path="/chatPage" element={withSuspense(ChatPage)} />
 
-                <Route
-                  path="/SocialNetwork_2.0/setting"
-                  element={withSuspense(Setting)}
-                />
-                <Route
-                  path="/SocialNetwork_2.0/login"
-                  element={withSuspense(Login)}
-                />
+                <Route path="setting" element={withSuspense(Setting)} />
+                <Route path="/login" element={withSuspense(Login)} />
                 <Route path="*" element={<div>404 NOT FOUND</div>} />
               </Routes>
             </div>

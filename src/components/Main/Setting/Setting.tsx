@@ -25,7 +25,7 @@ const Setting: FC<PropsType> = (props) => {
     }
   }, [props.profile])
   if (!isAuth) {
-    return <Navigate to={'/SocialNetwork_2.0/login'} />
+    return <Navigate to={'/login'} />
   }
   return (
     <div className={style.settingContainer}>

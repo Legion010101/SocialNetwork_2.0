@@ -38,9 +38,9 @@ let Paginator: FC<Props> = ({
       <ul className="pagination">
         {openPage > 10 && (
           <li className="page-item" onClick={backPageUsers}>
-            <a className="page-link" href="#" aria-label="Previous">
+            <span className="page-link" aria-label="Previous">
               <span aria-hidden="true">&laquo;</span>
-            </a>
+            </span>
           </li>
         )}
         {pages.map((num) => {
@@ -51,18 +51,18 @@ let Paginator: FC<Props> = ({
                 className={classnames('page-item', boldStyle(num))}
                 key={num}
                 onClick={() => chooseNumberPage(num)}>
-                <a className="page-link" href="#">
+                <span className="page-link">
                   {num < 10 ? <>&nbsp; {num}</> : num}
-                </a>
+                </span>
               </li>
             )
           )
         })}
         {openPage < totalPage && (
           <li className="page-item" onClick={showMoreUsers}>
-            <a className="page-link" href="#" aria-label="Next">
+            <span className="page-link" aria-label="Next">
               <span aria-hidden="true">&raquo;</span>
-            </a>
+            </span>
           </li>
         )}
       </ul>

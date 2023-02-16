@@ -32,7 +32,6 @@ const Status = () => {
   }
   let toggleStatusRedactorOff = () => {
     setEditMode(false)
-    dispatch(updateStatus(status))
   }
 
   return (
@@ -59,8 +58,7 @@ const Status = () => {
 type PropsType = {status: string | null; toggleStatusRedactorOff: () => void}
 const NewStatus: FC<PropsType> = ({status, toggleStatusRedactorOff}) => {
   const dispatch: ProfileDispatch = useDispatch()
-  const validateStatus = MaxLength(30)
-
+  const validateStatus = MaxLength(32)
   const onSubmit = (
     values: {status: string | null},
     {setSubmitting}: FormikHelpers<{status: string | null}>,

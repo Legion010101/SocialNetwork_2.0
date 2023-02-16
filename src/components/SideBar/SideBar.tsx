@@ -25,7 +25,7 @@ export const SideBar: FC<PropsType> = ({location}) => {
 
   const [activeKey, setActiveKey] = useState('1')
   useEffect(() => {
-    switch (location.slice(19, 20)) {
+    switch (location.slice(1, 2)) {
       case 'p': {
         setActiveKey('1')
         break

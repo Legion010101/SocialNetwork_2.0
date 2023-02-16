@@ -20,19 +20,25 @@ const UserSelectorForm: FC<Props> = (props) => {
   const [searchByPreviousName, setSearchByPreviousName] = useState(
     props.userName ? props.userName : '',
   )
+  const [searchByIsFriend, setSearchByIsFriend] = useState(
+    props.isFriend ? props.isFriend : 'any',
+  )
   type initialValuesTypes = typeof initialValues
   const initialValues = {
     pageNumber: props.pageNumber,
     usersNumber: props.usersNumber,
     userName: searchByPreviousName,
-    isFriend: props.isFriend,
+    isFriend: searchByIsFriend,
   }
 
   const onSubmit = (
     values: initialValuesTypes,
     {setSubmitting}: FormikHelpers<initialValuesTypes>,
   ) => {
-    if (searchByPreviousName === values.userName) {
+    if (
+      searchByPreviousName === values.userName &&
+      searchByIsFriend === values.isFriend
+    ) {
       props.getUsers(
         values.pageNumber,
         values.usersNumber,

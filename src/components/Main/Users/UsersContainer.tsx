@@ -31,6 +31,7 @@ const UsersPage: FC = () => {
 
   const navigate = useNavigate()
 
+  // логика следующих двух useEffect прописана для Browser router .Перевел проект на Hash для коректной работе на gh
   useEffect(() => {
     let url = new URL(window.location.href)
     let ActualPage = pageNumber
@@ -48,7 +49,6 @@ const UsersPage: FC = () => {
 
   useEffect(() => {
     let url = new URL(window.location.href)
-
     pageNumber > 1
       ? url.searchParams.set('page', String(pageNumber))
       : url.searchParams.delete('page')
