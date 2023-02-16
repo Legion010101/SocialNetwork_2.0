@@ -1,0 +1,29 @@
+.userName {
+    width: 240px;
+
+}
+
+.userName input {
+    border: none;
+    width: 100%;
+    padding-left: 5px;
+}
+
+.userName input:hover {
+    cursor: pointer;
+}
+
+.userName input:focus {
+    outline: 0;
+}
+
+.searchForm {
+    display: grid;
+    grid-template-columns: 240px 140px 100px;
+    grid-gap: 10px;
+}
+
+.searchForm select {
+    border: none;
+    width: 100%;
+}

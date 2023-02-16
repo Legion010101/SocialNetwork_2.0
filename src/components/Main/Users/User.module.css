@@ -1,9 +1,13 @@
+.container {
+    height: 572px;
+}
+
 .listUser {
     display: inline-grid;
     max-width: 600px;
     grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
-
     grid-template-columns: 10fr;
+    margin-left: 400px;
 }
 
 .listUser h2 {
@@ -16,15 +20,15 @@
 
 .user {
     display: grid;
-    grid-template-columns: 80px 10fr;
+    grid-template-columns: 100px 10fr;
     grid-template-rows: 10fr 40px;
-    margin-left: 100px;
+    grid-row-gap: 5px;
 }
 
 .user img {
     width: 60px;
     height: 60px;
-    border-radius: 50px;
+    border-radius: 15px;
 }
 
 .avatar {
@@ -35,9 +39,9 @@
 }
 
 .subscribe {
-    background-color: #c36be0;
+    background-color: #1677fc;
     border-radius: 10px;
-    border: 1px solid #b227e3;
+    border: 1px solid #0154c4;
     height: 30px;
     color: white;
 
@@ -45,7 +49,8 @@
 }
 
 .un {
-    background-color: #868686;
+    background-color: #002140;
+    color: white;
 }
 
 
@@ -55,9 +60,9 @@
 }
 
 .description {
+    width: 380px;
     display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: 30px 1fr;
+    grid-template-columns: 200px 140px;
     border: 1px solid #20b5b9;
     border-radius: 15px;
     padding: 10px;

@@ -1,3 +1,7 @@
+.container {
+    height: 570px;
+}
+
 .posts {
     margin-top: 15px;
 }
@@ -29,12 +33,15 @@
 
 .description {
     display: grid;
-    grid-template-columns: 60px 250px 250px;
+    grid-template-columns: 220px 350px 600px 150px;
+
     padding: 10px;
-
-
+    font-size: 1.2rem;
 }
 
+.descriptionContainer {
+    height: 550px;
+}
 
 ::-webkit-scrollbar {
     width: 15px;
@@ -53,7 +60,34 @@
     border-radius: 5px;
 }
 
-.about {
+.profileAvatar {
+    width: 200px;
+    height: 200px;
 
+    border-radius: 10%;
 }
 
+.setting {
+    padding-top: 30px;
+}
+
+.editMode:hover {
+    cursor: pointer;
+}
+
+.AboutProfile {
+    padding-top: 20px;
+}
+
+.statusText {
+    margin-bottom: 10px;
+}
+
+.contacts {
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.lookingForAJob {
+    padding-top: 20px;
+}

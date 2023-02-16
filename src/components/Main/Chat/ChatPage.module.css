@@ -1,0 +1,52 @@
+.MessagesList {
+    margin-top: 16px;
+    height: 520px;
+
+    overflow-y: scroll;
+}
+
+.text {
+    display: grid;
+    grid-template-rows: 40px 40px;
+    border: 1px solid #eefcdd;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+
+    margin-right: 20px;
+    background-color: #eefcdd;
+
+}
+
+.textHost {
+    background-color: #76acfc;
+}
+
+.message {
+    display: grid;
+    grid-template-columns: 70px auto;
+    margin: 15px 0;
+}
+
+.userName {
+    font-weight: bold;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+}
+
+.newMessage input {
+    border: none;
+    width: 1000px;
+}
+
+.newMessage input:focus {
+    outline: 0;
+}
+
+.newMessageForm {
+    margin-left: 70px;
+    margin-top: 20px;
+}

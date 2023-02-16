@@ -1,0 +1,73 @@
+.settingContainer {
+    font-size: 1.1rem;
+    color: #4f4e4e;
+    overflow-y: scroll;
+    height: 550px;
+
+}
+
+.settingContainer h1 {
+    margin-bottom: 40px;
+}
+
+.contacts {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contacts input {
+    border: none;
+    width: 600px;
+}
+
+.contacts input:focus {
+    outline: 0
+}
+
+.contacts input:hover {
+    cursor: pointer;
+}
+
+.contact {
+    width: 600px;
+}
+
+.lookingForAJob {
+    display: grid;
+    grid-template-columns: 150px 50px;
+    margin-top: 10px;
+}
+
+.lookingForAJobDescription {
+    margin-top: 20px;
+
+}
+
+.fullName {
+    margin-top: 20px;
+
+}
+
+.successful {
+    color: green;
+    width: 400px;
+    height: 50px;
+    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: black;
+    width: 400px;
+    height: 50px;
+    border: 2px solid #181717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
