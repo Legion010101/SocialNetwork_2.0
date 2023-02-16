@@ -16,7 +16,7 @@ export const ProfileUserContainerAPI = () => {
 
   useEffect(() => {
     if (userId === 'me' && !idUserAuth) {
-      navigate('/login')
+      navigate('/SocialNetwork_2.0/login')
     } else if (userId === 'me' && idUserAuth) {
       dispatch(getProfileUser(idUserAuth))
       dispatch(getStatus(idUserAuth))

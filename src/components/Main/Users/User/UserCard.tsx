@@ -22,7 +22,9 @@ let UserCard: FC<Props> = ({
   return (
     <div>
       <div className={style.user}>
-        <NavLink to={'/profile/' + user.id} className={style.avatar}>
+        <NavLink
+          to={'/SocialNetwork_2.0/profile/' + user.id}
+          className={style.avatar}>
           <Avatar avatar={user.photos.small} />
         </NavLink>
         <div className={style.description}>

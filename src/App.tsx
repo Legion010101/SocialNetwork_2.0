@@ -1,5 +1,5 @@
 import './App..css'
-import {Navigate, Route, Routes} from 'react-router-dom'
+import {Navigate, Route, Routes, useLocation} from 'react-router-dom'
 import {ProfileUserContainerAPI} from './components/Main/Profile/ProfileUser/ProfileUserContainer'
 import React, {FC, useEffect, useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
@@ -26,6 +26,7 @@ export type MenuItem = Required<MenuProps>['items'][number]
 export const App: FC = () => {
   const initialization = useSelector(getInitialization)
   const dispatch: appDispatch = useDispatch()
+  const location = useLocation()
 
   useEffect(() => {
     dispatch(initializationLoading())
@@ -49,7 +50,7 @@ export const App: FC = () => {
           ) : (
             <h2 className="headerLogo"></h2>
           )}
-          <SideBar />
+          <SideBar location={location.pathname} />
         </Sider>
         <Layout className="site-layout">
           <Header />
@@ -62,18 +63,30 @@ export const App: FC = () => {
               }}>
               <Routes>
                 <Route
-                  path="/social-network"
-                  element={<Navigate to={'/profile/me'} />}
+                  path="/SocialNetwork_2.0"
+                  element={<Navigate to={'/SocialNetwork_2.0/profile/me'} />}
                 />
                 <Route
-                  path="/profile/:userId"
+                  path="/SocialNetwork_2.0/profile/:userId"
                   element={<ProfileUserContainerAPI />}
                 />
-                <Route path="/findUsers" element={withSuspense(Users)} />
-                <Route path="/chatPage" element={withSuspense(ChatPage)} />
+                <Route
+                  path="/SocialNetwork_2.0/findUsers"
+                  element={withSuspense(Users)}
+                />
+                <Route
+                  path="/SocialNetwork_2.0/chatPage"
+                  element={withSuspense(ChatPage)}
+                />
 
-                <Route path="/setting" element={withSuspense(Setting)} />
-                <Route path="/login" element={withSuspense(Login)} />
+                <Route
+                  path="/SocialNetwork_2.0/setting"
+                  element={withSuspense(Setting)}
+                />
+                <Route
+                  path="/SocialNetwork_2.0/login"
+                  element={withSuspense(Login)}
+                />
                 <Route path="*" element={<div>404 NOT FOUND</div>} />
               </Routes>
             </div>

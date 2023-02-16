@@ -1,4 +1,4 @@
-import React, {FC} from 'react'
+import React, {FC, useEffect, useState} from 'react'
 import {MenuItem} from '../../App'
 import {NavLink} from 'react-router-dom'
 import {Menu} from 'antd'
@@ -20,8 +20,27 @@ function getItem(
   } as MenuItem
 }
 
-export const SideBar: FC = () => {
+export const SideBar: FC<PropsType> = ({location}) => {
   const navList = useSelector(getNavList)
+
+  const [activeKey, setActiveKey] = useState('1')
+  useEffect(() => {
+    switch (location.slice(19, 20)) {
+      case 'p': {
+        setActiveKey('1')
+        break
+      }
+      case 'f': {
+        setActiveKey('2')
+        break
+      }
+      case 'c': {
+        setActiveKey('3')
+        break
+      }
+    }
+  }, [location])
+
   const items = navList.map((link) => {
     let icon
     switch (link.text) {
@@ -52,6 +71,10 @@ export const SideBar: FC = () => {
       defaultSelectedKeys={['1']}
       mode="inline"
       items={items}
+      selectedKeys={[activeKey]}
     />
   )
+}
+type PropsType = {
+  location: string
 }

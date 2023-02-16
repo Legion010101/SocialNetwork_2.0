@@ -14,7 +14,7 @@ const Login: FC = () => {
   const isAuth = useSelector(getIsAuth)
 
   if (isAuth) {
-    return <Navigate to={'/profile/me'} />
+    return <Navigate to={'/SocialNetwork_2.0/profile/me'} />
   }
   return (
     <div className={style.loginContainer}>

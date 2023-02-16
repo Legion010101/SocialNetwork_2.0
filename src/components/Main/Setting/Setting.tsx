@@ -1,7 +1,7 @@
 import {Formik, Field, Form} from 'formik'
 import React, {FC, useEffect, useState} from 'react'
 import {FieldHelper} from '../../../utility/FieldHelper'
-import {connect} from 'react-redux'
+import {connect, useSelector} from 'react-redux'
 import {
   getProfileUser,
   updateProfile,
@@ -13,13 +13,20 @@ import {profileType} from '../../../types/types'
 import {AppStateType} from '../../../redux/reduxStore'
 import style from './Setting.module.css'
 import {CheckOutlined, StopOutlined} from '@ant-design/icons'
+import {getIsAuth} from '../../../redux/reduxSelectors/authSelector'
+import {Navigate} from 'react-router-dom'
 
 const Setting: FC<PropsType> = (props) => {
+  const isAuth = useSelector(getIsAuth)
+
   useEffect(() => {
     if (!props.profile && props.userId && props.getProfileUser) {
       props.getProfileUser(props.userId)
     }
   }, [props.profile])
+  if (!isAuth) {
+    return <Navigate to={'/SocialNetwork_2.0/login'} />
+  }
   return (
     <div className={style.settingContainer}>
       <h1>Setting profile</h1>
